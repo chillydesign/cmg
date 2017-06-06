@@ -1,37 +1,38 @@
-<ul class="employees">
+<ul id="employees">
 
 <%  _.each(staff_members,function(employee,key,list){  %>
 
 	<li class="single_employee">
 		<div class="single_employee_inner employee_<%= employee.slug %>">
-		<h5><%= employee.post_title %></h5>
+		<h4><%= employee.post_title %></h4>
+    <ul>
 
-    <% if (employee.telephone_1 != ''){ %>
-      <p>Tel1: <%= employee.telephone_1 %></p>
-    <% } %>
-
-		<% if (employee.telephone_1 != ''){ %>
-      <p>Tel2: <%= employee.telephone_1 %></p>
+    <% if (employee.telephones.length > 0  ){ %>
+      <li><i class="fa fa-phone fa-fw"></i>  <%= employee.telephones.join(' , ') %></li>
     <% } %>
 
 		<% if (employee.email != ''){ %>
-      <p>Email: <%= employee.email %></p>
+      <li><i class="fa fa-envelope fa-fw"></i> <a href="mailto:<%= employee.email %>"><%= employee.email %></a></li>
     <% } %>
 
-		<% if (employee.position != ''){ %>
-      <p>Position: <%= employee.position %></p>
+
+
+    <% if (employee.position != ''){ %>
+      <li class="line_break"><i class="fa fa-briefcase fa-fw"></i> <%= employee.position %></li>
     <% } %>
 
 		<% if (employee.addresse != ''){ %>
-      <p>Addresse: <%= employee.addresse %></p>
+      <li class="line_break"><i class="fa fa-map-marker fa-fw"></i>  <%= employee.addresse %></li>
     <% } %>
 
     <% if ( employee.categories.length > 0 ) {%>
-		<p> <%= employee.categories[0].name %></p>
+		<li class="line_break"> <%= employee.categories[0].name %></li>
     <% }; %>
-		</div>
-	</li>
 
+
+
+</ul>
+</div>
 <% }) %>
 
 </ul>

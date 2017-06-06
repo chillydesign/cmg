@@ -1,13 +1,15 @@
 <?php /*Template Name: Search Template */ get_header(); ?>
 
-<form  method="GET" action="">
-<input placeholder="chercher un staff membre" id="staff_search_form"  type="text" name="sm" >
-<input type="submit" id="submit_staff_search"  />
-</form>
-
 
 
 <div class="container">
+
+	<form  method="GET" action="">
+	<input placeholder="chercher un staff membre" id="staff_search"  type="text" name="sm" >
+	<input type="submit" id="submit_staff_search"  />
+	</form>
+
+
 	 <div id="staff_container"></div>
 </div>
 

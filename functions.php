@@ -117,11 +117,18 @@ function webfactor_conditional_scripts()
 // Load HTML5 Blank styles
 function webfactor_styles()
 {
+
+  wp_register_style('wf_bootstrap', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), wf_version(),  'all');
+  wp_enqueue_style('wf_bootstrap'); // Enqueue it!
+
     wp_register_style('reset', get_template_directory_uri() . '/reset.css', array(), wf_version(), 'all');
     wp_enqueue_style('reset'); // Enqueue it!
 
     wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(),  'all');
     wp_enqueue_style('wf_style'); // Enqueue it!
+
+
+
 }
 
 // Register HTML5 Blank Navigation
