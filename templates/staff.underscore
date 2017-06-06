@@ -1,0 +1,40 @@
+<ul class="employees">
+
+<%  _.each(staff_members,function(employee,key,list){  %>
+
+	<li class="single_employee">
+		<div class="single_employee_inner employee_<%= employee.slug %>">
+		<h5><%= employee.post_title %></h5>
+
+    <% if (employee.telephone_1 != ''){ %>
+      <p>Tel1: <%= employee.telephone_1 %></p>
+    <% } %>
+
+		<% if (employee.telephone_1 != ''){ %>
+      <p>Tel2: <%= employee.telephone_1 %></p>
+    <% } %>
+
+		<% if (employee.email != ''){ %>
+      <p>Email: <%= employee.email %></p>
+    <% } %>
+
+		<% if (employee.position != ''){ %>
+      <p>Position: <%= employee.position %></p>
+    <% } %>
+
+		<% if (employee.addresse != ''){ %>
+      <p>Addresse: <%= employee.addresse %></p>
+    <% } %>
+
+    <% if ( employee.categories.length > 0 ) {%>
+		<p> <%= employee.categories[0].name %></p>
+    <% }; %>
+		</div>
+	</li>
+
+<% }) %>
+
+</ul>
+
+
+<a href="#" id="back_to_top">&#8593;</a>
