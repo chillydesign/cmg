@@ -1,0 +1,30 @@
+{
+  "name": "cmg",
+  "description": "CMG wordpress theme by Webfactor",
+  "main": "index.php",
+  "authors": [
+    "Charles Harvey"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "webfactor",
+    "blank",
+    "theme"
+  ],
+  "homepage": "https://github.com/chillydesign/cmg",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "clndr": "^1.4.7",
+    "underscore": "^1.8.3",
+    "jquery": "^3.2.1"
+  }
+}

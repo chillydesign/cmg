@@ -13,10 +13,12 @@
 
 
 		<?php $td = get_template_directory_uri() ; ?>
-		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/underscore/underscore-min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/js/min/zabuto_calendar.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/moment/min/moment.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/clndr/clndr.min.js"></script>
+
 		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
 		<?php wp_footer(); ?>
 
