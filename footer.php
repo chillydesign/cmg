@@ -9,7 +9,10 @@
 			<!-- /footer -->
 
 
-
+		<?php $td = get_template_directory_uri() ; ?>
+		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
 		<?php wp_footer(); ?>
 
 		<script>
