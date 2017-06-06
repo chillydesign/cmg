@@ -25,6 +25,20 @@
 
 
 
+		// CALENDAR
+		if (typeof calendar_api_url != 'undefined'){
+			$("#events_calendar").zabuto_calendar({
+	      ajax: {
+	          url: calendar_api_url,
+	          modal: true
+	      }
+			});
+
+		}
+
+
+
+
 
 
 
@@ -36,6 +50,7 @@
 			var $staff_search = $('#staff_search');
 			var $staff_container = $('#staff_container');
 			var $staff_template = $('#staff_template').html();
+			var $search_checks = $('.search_check');
 
 
 			// if form is submitted, prefil the search box after page load
@@ -69,12 +84,9 @@
 				});
 
 
-				$('#back_to_top').on('click', function(e){
-					e.preventDefault();
-					$("html, body").animate({ scrollTop: 0 }, 500);
-				})
-
-
+				$search_checks.on('change', function(){
+					displayStaffMembers(staff_members, $staff_container, compiled)
+				});
 
 			});
 
@@ -93,23 +105,45 @@
 		function displayStaffMembers(staff_members, staff_container, compiled){
 
 			var $search_val = $staff_search.val().toLowerCase();
+			var $cats = new Array();
 
-			var $s_staff_members =  processStaff(staff_members, $search_val);
+			$search_checks.each(function(){
+				var $this = $(this);
+				var $check_type = $this.data('field');
+				if( $this.is(":checked")) {
+
+					if( $check_type =='category' ){
+						$cats.push(   parseInt($this.val())  )
+					}
+
+				};
+
+			});
+
+
+
+
+
+			var $s_staff_members =  processStaff(staff_members, $search_val, $cats);
 
 			staff_container.html(  compiled({ staff_members:   $s_staff_members  })  );
+
+
+			$('#back_to_top').on('click', function(e){
+				e.preventDefault();
+				$("html, body").animate({ scrollTop: 0 }, 500);
+			});
 
 
 		}
 
 
-		function processStaff(staff, search){
+		function processStaff(staff, search, cats){
 
 
 			if (search && search != '' ){
 				var search_array = _.reject( removeDiacritics(search.toLowerCase()  ).split(' ') , function(t) { return t == '' })  ;
-
 				var staff = _.filter(  staff ,  function(s) {
-
 					return (
 						_.every(search_array, function(t) {  return  s.searchfield.indexOf(t) > -1    })
 
@@ -119,6 +153,13 @@
 			}
 
 
+			if (cats && cats.length > 0) {
+				var staff = _.reject(  staff ,  function(s) {
+					  var term_ids = _.pluck(s.categories, 'term_id');
+						return ( _.intersection( cats, term_ids ).length == 0   );
+				});
+			}
+
 
 			var staff_array =  _.toArray(staff) ;
 
@@ -126,10 +167,14 @@
 			for (var i = 0; i < staff_array.length ; i++) {
 				var employee = staff_array[i];
 
+
+
 				if (  employee.categories.length > 0 ) {
 					employee['slug'] =   employee.categories[0].slug;
+					employee['category_names'] = _.pluck(employee.categories, 'name').join(', ');
 				} else {
 					employee['slug'] = 'none'
+					employee['category_names'] = '';
 				}
 
 

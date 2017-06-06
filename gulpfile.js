@@ -11,7 +11,7 @@ gulp.task('heya', function() {
 
 
 gulp.task('sass', function(){
-  return gulp.src('scss/global.scss')
+  return gulp.src( 'scss/global.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(autoprefixer({
         cascade: false

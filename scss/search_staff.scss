@@ -1,0 +1,56 @@
+@import "variables";
+
+#submit_staff_search {
+	display: none;
+}
+
+ul#employees {
+
+	li.single_employee {
+		font-size: 1em;
+		margin: 0 0 10px;
+		padding:0 0 10px;
+		border-bottom: 1px solid transparentize($font-color,0.5);
+
+		.single_employee_inner {
+			h4 {
+				padding: 5px 0 10px;
+				margin:0;
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					padding: 0 10px 0 0;
+					font-size: 1.4em;
+					display: inline-block;
+
+					&.line_break {
+						display: block;
+					}
+
+					i, .glyphicon {
+						color: transparentize($font-color, 0.3);
+						font-size: 0.85em;
+						padding-right: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#category_box {
+	margin:30px 0;
+}
+.search_box {
+	label {
+		display: block;
+		text-indent: -30px;
+		padding: 5px 0 5px 30px;
+		border-bottom: 1px dotted transparentize($font-color, 0.8);
+	}
+}

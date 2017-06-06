@@ -1,17 +1,5 @@
 
-<?php
 
-$update_taxonomy = 'category';
-$get_terms_args = array(
-        'taxonomy' => $update_taxonomy,
-        'fields' => 'ids',
-        'hide_empty' => false,
-        );
-
-$update_terms = get_terms($get_terms_args);
-wp_update_term_count_now($update_terms, $update_taxonomy);
-
- ?>
 
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
@@ -26,7 +14,9 @@ wp_update_term_count_now($update_terms, $update_taxonomy);
 
 		<?php $td = get_template_directory_uri() ; ?>
 		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/node_modules/underscore/underscore-min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/min/zabuto_calendar.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
 		<?php wp_footer(); ?>
 

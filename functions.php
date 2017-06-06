@@ -118,11 +118,9 @@ function webfactor_conditional_scripts()
 function webfactor_styles()
 {
 
-  wp_register_style('wf_bootstrap', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), wf_version(),  'all');
-  wp_enqueue_style('wf_bootstrap'); // Enqueue it!
 
-    wp_register_style('reset', get_template_directory_uri() . '/reset.css', array(), wf_version(), 'all');
-    wp_enqueue_style('reset'); // Enqueue it!
+    wp_register_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), wf_version(), 'all');
+    wp_enqueue_style('bootstrap'); // Enqueue it!
 
     wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(),  'all');
     wp_enqueue_style('wf_style'); // Enqueue it!
@@ -405,10 +403,41 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called personnel
-add_action('init', 'create_post_type_personnel'); // Add our HTML5 Blank Custom Post Type
-function create_post_type_personnel()
-{
-    register_taxonomy_for_object_type('category', 'personnel'); // Register Taxonomies for Category
+add_action('init', 'create_post_type_personnel');
+add_action('init', 'create_post_type_evenement');
+add_action( 'init', 'create_personnel_cat' );
+function create_personnel_cat() {
+
+  $per_labels = array(
+    'name'              => _x( 'Categorie', 'taxonomy general name', 'webfactor' ),
+    'singular_name'     => _x( 'Categorie', 'taxonomy singular name', 'webfactor' ),
+    'search_items'      => __( 'Chercher Categorie', 'webfactor' ),
+    'all_items'         => __( 'Toutes les Categorie', 'webfactor' ),
+    'edit_item'         => __( 'Modifier Categorie', 'webfactor' ),
+    'update_item'       => __( 'Mettre à jour Categorie', 'webfactor' ),
+    'add_new_item'      => __( 'Ajouter Categorie', 'webfactor' ),
+    'new_item_name'     => __( 'Nouvelle Categorie', 'webfactor' ),
+    'menu_name'         => __( 'Categorie', 'webfactor' ),
+  );
+
+
+  $tax_args = array(
+    'hierarchical'      => true,
+    'labels'            => $per_labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'personnel_category' ),
+  );
+
+
+    register_taxonomy( 'personnel_category', array( 'personnel') , $tax_args );
+
+
+  }
+
+  function create_post_type_personnel(){
+  //  register_taxonomy_for_object_type('personnel_category', 'personnel'); // Register Taxonomies for Category
     register_post_type('personnel', // Register Custom Post Type
         array(
         'labels' => array(
@@ -433,10 +462,47 @@ function create_post_type_personnel()
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
-            'category'
+        //    'personnel_category'
         ) // Add Category and Post Tags support
     ));
 }
+
+  function create_post_type_evenement(){
+  //  register_taxonomy_for_object_type('personnel_category', 'personnel'); // Register Taxonomies for Category
+    register_post_type('evenement', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Evenements', 'webfactor'), // Rename these to suit
+            'singular_name' => __('Evenement', 'webfactor'),
+            'add_new' => __('Add New', 'webfactor'),
+            'add_new_item' => __('Add New evenement', 'webfactor'),
+            'edit' => __('Edit', 'webfactor'),
+            'edit_item' => __('Edit evenements', 'webfactor'),
+            'new_item' => __('New evenements', 'webfactor'),
+            'view' => __('View evenements', 'webfactor'),
+            'view_item' => __('View evenements', 'webfactor'),
+            'search_items' => __('Search evenements', 'webfactor'),
+            'not_found' => __('No evenements found', 'webfactor'),
+            'not_found_in_trash' => __('No evenements found in Trash', 'webfactor')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+        //    'personnel_category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+
+
+
+
 
 /*------------------------------------*\
 	ShortCode Functions

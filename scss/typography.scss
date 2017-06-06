@@ -70,4 +70,8 @@ blockquote {
 }
 blockquote p:last-child {padding-bottom: 0}
 
-input {padding: 10px;width: 100%;font-size: 1.5em;appearance:none;}
+input {padding: 10px;width: 100%;font-size: 1.5em;}
+input[type="checkbox"] { width:auto }
+label {
+	font-size: 1.4em;
+}
