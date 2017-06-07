@@ -2,7 +2,10 @@
 
 
 <div class="container">
-<div id="events_calendar"></div>
+<div id="events_calendar">
+	<span class="loading glyphicon glyphicon-cog"></span>
+</div>
+
 </div>
 
 

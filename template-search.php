@@ -22,7 +22,10 @@
 
 
 		<div class="col-sm-9 ">
-			<div id="staff_container"></div>
+			<div id="staff_container">
+					<span class="loading glyphicon glyphicon-cog"></span>
+			</div>
+
 		</div>
 	</div>
 

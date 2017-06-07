@@ -6,7 +6,7 @@
 @import 'typography';
 @import 'header';
 @import 'footer';
-@import 'zabuto';
+@import 'animations';
 
 
 
@@ -23,3 +23,10 @@ body {
 
 @import 'search_staff';
 @import 'calendar';
+
+
+.loading {
+		font-size: 4em;
+		animation: spin 2s infinite linear;
+		margin:20px;
+}
