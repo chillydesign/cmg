@@ -29,4 +29,5 @@ body {
 		font-size: 4em;
 		animation: spin 2s infinite linear;
 		margin:20px;
+		color: lighten($font-color,30);
 }
