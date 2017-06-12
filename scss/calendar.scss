@@ -9,11 +9,11 @@
 #events_calendar .clndr
 {
   overflow: hidden;
-  border-bottom: 7px solid $primary-color;
+  border-bottom: 7px solid $blue;
 
   .controls
   {
-    background-color: $primary-color;
+    background-color: $blue;
     color: white;
 
     .clndr-previous-button, .clndr-next-button
@@ -30,7 +30,7 @@
       transition: background-color 0.3s;
       &:hover
       {
-        background-color: darken($primary-color, 10%);
+        background-color: darken($blue, 10%);
       }
     }
     .month
@@ -102,7 +102,7 @@
 
       .headers
       {
-        background-color: $primary-color;
+        background-color: $blue;
         padding-top: 10px;
     padding-bottom: 10px;
 
@@ -133,7 +133,7 @@
       .event-header
       {
         width: 100%;
-        background-color: $primary-color;
+        background-color: $blue;
         padding-top: 10px;
     padding-bottom: 10px;
         text-align: center;
@@ -187,7 +187,7 @@
             &:hover
             {
               background-color: transparent;
-              color: $primary-color;
+              color: $blue;
             }
           }
         }

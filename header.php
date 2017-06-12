@@ -18,21 +18,6 @@
 	<body <?php body_class(); ?>>
 
 
-			<header class="header" id="header">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-3 col-sm-push-0 col-xs-10 col-xs-push-1">
-							<a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
-						</div>
-						<div class="col-sm-9">
-							<nav id="navigation_menu" role="navigation">
-								 <?php chilly_nav('primary-navigation'); ?>
-							</nav>
-						</div>
 
-					</div>
-					<a href="#" id="menu_button" >Menu</a>
-				</div>
-
-
-			</header>
+			<div id="page_container" class="clearfix" >
+				<div id="page_section">

@@ -4,6 +4,10 @@
 
 		'use strict';
 
+				$('.stickysidebar').theiaStickySidebar({
+					 additionalMarginTop: 30
+				});
+
 
 
 		// SHOW NAVIGATION MENU ON MOBILE

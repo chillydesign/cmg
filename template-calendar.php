@@ -1,12 +1,14 @@
 <?php /*Template Name: Calendar Template */ get_header(); ?>
 
 
-<div class="container">
+<h1><?php the_title(); ?></h1>
+
+
 <div id="events_calendar">
 	<span class="loading glyphicon glyphicon-cog"></span>
 </div>
 
-</div>
+
 
 
 <script type="text/javascript">

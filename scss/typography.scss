@@ -1,7 +1,22 @@
 
 /*TYPOGRAPHY*/
 
-h1 {font-size: 3.9em; padding:50px 0 50px;font-weight: normal;}
+
+h1 {
+	background: url('../img/h1.jpg') no-repeat center center;
+	background-size: cover;
+	padding:45px 30px;
+	width: 100%;
+	color: white;
+	text-align: center;
+	margin:0 0 30px;
+	text-transform: uppercase;
+	text-shadow: 0 0 5px transparentize(black,0.5);
+	font-size: 3em;
+	line-height: 120%;
+}
+
+
 h2 {font-size: 2.9em; padding: 0 0 20px;font-weight: bold}
 h3 {font-size: 2.21em;padding:0 0 20px;}
 h4 {font-size: 1.69em;padding:0 0 10px;font-weight: bold;text-transform: uppercase}
@@ -16,7 +31,7 @@ ul ul , ul ol, ol ol {font-size: inherit}
 
 
 @media (min-width: 768px){
-	h1 {font-size: 5em;}
+	h1 {font-size: 3em;}
 	h2 {font-size: 3.1em}
 	h3 {font-size: 2.41em}
 	h4 {font-size: 1.79em}
@@ -30,7 +45,7 @@ ul ul , ul ol, ol ol {font-size: inherit}
 
 a {
 	text-decoration: none;
-	border-bottom: 1px dotted $primary-color;
+	border-bottom: 1px dotted $blue;
 	display: inline-block;
 	font-style: italic;
 	border-radius:3px;
@@ -38,11 +53,11 @@ a {
 
 
 	&:link, &:visited, &:active {
-		color: $primary-color
+		color: $blue
 	}
 	&:hover {
-		border-bottom: 1px solid $primary-color;
-		background-color: transparentize($primary-color,0.8)
+		border-bottom: 1px solid $blue;
+		background-color: transparentize($blue,0.8)
 	}
 }
 

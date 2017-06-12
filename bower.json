@@ -25,6 +25,7 @@
     "bootstrap": "^3.3.7",
     "clndr": "^1.4.7",
     "underscore": "^1.8.3",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "sticky-sidebar": "*"
   }
 }

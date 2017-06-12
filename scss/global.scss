@@ -6,6 +6,7 @@
 @import 'typography';
 @import 'header';
 @import 'footer';
+@import 'sidebar';
 @import 'animations';
 
 
@@ -18,6 +19,17 @@ body {
 	font-family: $font-stack;
 	font-size: 62.5%;
 	font-weight: normal;
+}
+
+
+#page_container {
+
+}
+#page_section {
+
+	width: calc(100% - #{$sidebar-width } );
+	float:right;
+	padding:30px;
 }
 
 

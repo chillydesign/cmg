@@ -1,14 +1,15 @@
 <!-- sidebar -->
-<aside class="sidebar" role="complementary">
+<aside id="sidebar" role="complementary"   class="stickysidebar">
 
-	<?php get_template_part('searchform'); ?>
+	<div class="theiaStickySidebar " >
 
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-	</div>
 
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
+		<div class="sidebar__inner">
+
+				 <?php chilly_nav('primary-menu'); ?>
+
+
+		</div>
 	</div>
 
 </aside>
