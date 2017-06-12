@@ -4,9 +4,10 @@
 @import 'mixins';
 @import 'reset';
 @import 'typography';
-@import 'header';
+@import 'nav';
 @import 'footer';
-@import 'sidebar';
+@import 'box';
+
 @import 'animations';
 
 
@@ -14,23 +15,29 @@
 
 
 body {
-	background: $background-color;
-	color: $font-color;
-	font-family: $font-stack;
+	background: $background_color;
+	color: $font_color;
+	font-family: $font_stack;
 	font-size: 62.5%;
 	font-weight: normal;
 }
 
 
-#page_container {
 
-}
 #page_section {
-
-	width: calc(100% - #{$sidebar-width } );
+	width: calc(100% - #{$sidebar_width_mobile } );
 	float:right;
 	padding:30px;
 }
+
+@media (min-width: 768px){
+
+	#page_section {
+		width: calc(100% - #{$sidebar_width } );
+	}
+
+}
+
 
 
 @import 'search_staff';
@@ -41,51 +48,18 @@ body {
 		font-size: 4em;
 		animation: spin 2s infinite linear;
 		margin:20px;
-		color: lighten($font-color,30);
+		color: lighten($font_color,30);
 }
 
 
-.box {
-	border:2px solid $blue;
-	margin:0 0 30px;
+.title_icon {
+	padding:20px 0 20px 50px;
+	background-position: center center;
+	background-size: 40px;
+	background-repeat: no-repeat;
 
-	h3 {
-		background: $blue;
-		padding: 15px;
-		text-align: center;
-		color: white;
-
-	}
-
-	.box_content {
-		padding:15px;
-	}
-
-	&.box_orange {
-			border-color: $orange;
-
-			h3 {
-				background-color: $orange;
-			}
-
-	}
-
-	&.box_green {
-			border-color: $green;
-
-			h3 {
-				background-color: $green;
-			}
-
-	}
-
-	&.box_yellow {
-			border-color: $yellow;
-
-			h3 {
-				background-color: $yellow;
-			}
-
+	&.icon_download {
+		background-image:url('../images/download.png')
 	}
 
 }

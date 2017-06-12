@@ -1,0 +1,92 @@
+@import "variables";
+
+
+
+
+nav#sidebar {
+
+
+  width: $sidebar_width_mobile;
+  float:left;
+  color: white;
+  min-height: 100vh;
+  transition: all $transition_time;
+
+
+  &.expanded {
+    width: $sidebar_width;
+  }
+
+
+  ul {
+    margin:0;
+    padding: 20px;
+    list-style: none;
+
+
+    li {
+      margin:0;
+      padding:0;
+      display: block;
+      text-transform: uppercase;
+      border-bottom: 1px solid white;
+
+      a {
+        display: block;
+        padding:10px;
+
+        &:link, &:visited, &:active {
+          color: white;
+        }
+
+        &:hover {
+
+        }
+      }
+
+      ul {
+        padding:0;
+        margin::-10px 0 0 30px;
+
+        li {
+          text-transform: none;
+          border:0;
+
+          a {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#sidebar_bg {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  width: $sidebar_width_mobile;
+  left: 0;
+  height: 100%;
+  background: $blue;
+  z-index: -1;
+  transition: all $transition_time;
+
+  &.expanded {
+    width: $sidebar_width;
+  }
+
+}
+
+
+
+@media (min-width: 768px){
+  nav#sidebar {
+    width: $sidebar_width;
+  }
+  #sidebar_bg {
+    width: $sidebar_width;
+  }
+
+}

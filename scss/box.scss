@@ -1,0 +1,74 @@
+
+
+.box {
+	border:2px solid $blue;
+	margin:0 0 30px;
+
+	h3 {
+		background: $blue;
+		padding: 15px;
+		text-align: center;
+		color: white;
+
+	}
+
+	strong {
+		color: $blue;
+		font-weight: bold;
+	}
+
+	h4 {
+				color: $blue;
+
+				a {
+					color: inherit
+				}
+	}
+
+	.button {
+		background-color: $blue;
+	}
+
+	.box_content {
+		padding:15px;
+	}
+
+	&.box_orange {
+			border-color: $orange;
+
+			h3, .button {
+				background-color: $orange;
+			}
+			strong, h4 {
+				color:$orange;
+			}
+
+	}
+
+	&.box_green {
+			border-color: $green;
+
+			h3, .button {
+				background-color: $green;
+			}
+			strong, h4 {
+				color:$green;
+			}
+
+
+	}
+
+	&.box_yellow {
+			border-color: $yellow;
+
+			h3, .button {
+				background-color: $yellow;
+			}
+
+			strong, h4 {
+				color: $yellow;
+			}
+
+	}
+
+}

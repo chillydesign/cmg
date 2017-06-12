@@ -2,19 +2,24 @@
 #events_calendar{
 
   margin: 0 auto;
-  width: 294px;
+  width: 100%;
 
 }
+
+body.page-template-template-home #events_calendar {
+  margin-top:50px;
+}
+
 
 #events_calendar .clndr
 {
   overflow: hidden;
-  border-bottom: 7px solid $blue;
+
 
   .controls
   {
-    background-color: $blue;
-    color: white;
+    background-color: $light_grey;
+    color: $font_color;
 
     .clndr-previous-button, .clndr-next-button
     {
@@ -24,32 +29,34 @@
       display: inline-block;
       text-align: center;
       cursor: pointer;
+      font-size: 25px;
       -webkit-user-select: none; /* Chrome/Safari */
       -moz-user-select: none; /* Firefox */
       -ms-user-select: none; /* IE10+ */
       transition: background-color $transition_time;
       &:hover
       {
-        background-color: darken($blue, 10%);
+        background-color: darken($light_grey, 10);
       }
     }
     .month
     {
       width: 70%;
       padding-top: 10px;
-     padding-bottom: 10px;
+      padding-bottom: 10px;
       display: inline-block;
       text-align: center;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1px;
+      font-size: 20px;
     }
   }
 
   .days-container
   {
     position: relative;
-    width: 294px;
+    width: 100%;
     height: 213px;
 
 
@@ -57,17 +64,17 @@
     {
       position: absolute;
       left: 0;
-      width: 294px;
+      width: 100%;
       height: 217px;
       transition: left $transition_time;
-      background-color: #eee;
+      background-color: $light_grey;
 
       .day, .empty
       {
-        width: 42px;
+        width: 14.285714286%;
         display: inline-block;
         padding-top: 8px;
-       padding-bottom: 8px;
+        padding-bottom: 8px;
 
         font-size: 12px;
         // font-weight: 700;
@@ -79,12 +86,13 @@
 
         &.event
         {
-          background-color: darken(#eee, 10%);
+          background-color: lighten($orange, 30);
+          color: white;
           transition: background-color $transition_time;
           cursor: pointer;
           &:hover
           {
-            background-color: darken(#eee, 20%);
+            background-color: $orange
           }
         }
 
@@ -102,13 +110,13 @@
 
       .headers
       {
-        background-color: $blue;
+        background-color:  darken($light_grey,20);
         padding-top: 10px;
-    padding-bottom: 10px;
+        padding-bottom: 10px;
 
         .day-header
         {
-          width: 42px;
+          width: 14.285714286%;
           display: inline-block;
           text-align: center;
           color: white;
@@ -119,8 +127,8 @@
     .events
     {
       position: absolute;
-      left: 294px;
-      width: 294px;
+      left: 100%;
+      width: 100%;
       height: 217px;
       transition:left $transition_time;
       background-color: #eee;
@@ -133,7 +141,7 @@
       .event-header
       {
         width: 100%;
-        background-color: $blue;
+        background-color:  darken($light_grey,20);
         padding-top: 10px;
     padding-bottom: 10px;
         text-align: center;
@@ -167,7 +175,7 @@
           padding-bottom: 8px;
           padding-left: 10px;
           border-bottom: 1px solid transparentize(white, 0.5);
-         transition: background-color $transition_time;
+          transition: background-color $transition_time;
 
           &:hover
           {
@@ -187,7 +195,7 @@
             &:hover
             {
               background-color: transparent;
-              color: $blue;
+              color: $orange;
             }
           }
         }
@@ -198,7 +206,7 @@
     {
       .days
       {
-        left: -294px;
+        left: -100%;
       }
       .events
       {

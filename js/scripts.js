@@ -4,9 +4,16 @@
 
 		'use strict';
 
-				$('.stickysidebar').theiaStickySidebar({
-					 additionalMarginTop: 30
-				});
+			$('.stickysidebar').theiaStickySidebar({
+				 additionalMarginTop: 30
+			});
+
+			$('#sidebar').on('mouseover', function(){
+				$('#sidebar, #sidebar_bg ').addClass('expanded');
+			}).on('mouseout', function(){
+				$('#sidebar, #sidebar_bg ').removeClass('expanded');
+			})
+
 
 
 
@@ -25,6 +32,7 @@
 				$('.search_box').removeClass('visible');
 			}
 		})
+
 
 
 
@@ -95,19 +103,6 @@
 			var $staff_container = $('#staff_container');
 			var $staff_template = $('#staff_template').html();
 			var $search_checks = $('.search_check');
-
-
-			// if form is submitted, prefil the search box after page load
-			var wls = window.location.search;
-			if (wls) {
-				if ( wls.indexOf('sm=') !== -1) {
-					var s = wls.split('sm=')[1];
-					var s =  s.split('&')[0];
-					var ssub = s.replace(/\+/g, ' ');
-					ssub = decodeURIComponent(ssub);
-					$staff_search.val(ssub).click();
-				}
-			}
 
 
 
