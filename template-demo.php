@@ -1,8 +1,5 @@
 <?php /* Template Name: Demo Page Template */ get_header(); ?>
 
-	
-		<!-- section -->
-		<section>
 
 			<h1><?php the_title(); ?></h1>
 
@@ -36,10 +33,5 @@
 
 		<?php endif; ?>
 
-		</section>
-		<!-- /section -->
-	
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

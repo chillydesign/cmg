@@ -404,6 +404,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called personnel
 add_action('init', 'create_post_type_personnel');
 add_action('init', 'create_post_type_evenement');
+add_action('init', 'create_post_type_bulletin');
 add_action( 'init', 'create_personnel_cat' );
 function create_personnel_cat() {
 
@@ -458,6 +459,39 @@ function create_personnel_cat() {
         'has_archive' => true,
         'supports' => array(
             'title'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+        //    'personnel_category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+
+  function create_post_type_bulletin(){
+  //  register_taxonomy_for_object_type('personnel_category', 'personnel'); // Register Taxonomies for Category
+    register_post_type('bulletin', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Bulletins', 'webfactor'), // Rename these to suit
+            'singular_name' => __('Bulletin', 'webfactor'),
+            'add_new' => __('Add New', 'webfactor'),
+            'add_new_item' => __('Add New Bulletin', 'webfactor'),
+            'edit' => __('Edit', 'webfactor'),
+            'edit_item' => __('Edit Bulletins', 'webfactor'),
+            'new_item' => __('New Bulletins', 'webfactor'),
+            'view' => __('View Bulletins', 'webfactor'),
+            'view_item' => __('View Bulletins', 'webfactor'),
+            'search_items' => __('Search bulletins', 'webfactor'),
+            'not_found' => __('No bulletins found', 'webfactor'),
+            'not_found_in_trash' => __('No bulletins found in Trash', 'webfactor')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(

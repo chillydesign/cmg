@@ -27,7 +27,7 @@
       -webkit-user-select: none; /* Chrome/Safari */
       -moz-user-select: none; /* Firefox */
       -ms-user-select: none; /* IE10+ */
-      transition: background-color 0.3s;
+      transition: background-color $transition_time;
       &:hover
       {
         background-color: darken($blue, 10%);
@@ -59,7 +59,7 @@
       left: 0;
       width: 294px;
       height: 217px;
-      transition: left 0.3s;
+      transition: left $transition_time;
       background-color: #eee;
 
       .day, .empty
@@ -80,7 +80,7 @@
         &.event
         {
           background-color: darken(#eee, 10%);
-          transition: background-color 0.3s;
+          transition: background-color $transition_time;
           cursor: pointer;
           &:hover
           {
@@ -122,7 +122,7 @@
       left: 294px;
       width: 294px;
       height: 217px;
-      transition:left 0.3s;
+      transition:left $transition_time;
       background-color: #eee;
 
       .headers
@@ -147,7 +147,7 @@
         top: 7px;
         left: 20px;
         cursor: pointer;
-        transition: color 0.3s;
+        transition: color $transition_time;
         font-size: 1.6em;
         color: white;
         &:hover
@@ -167,7 +167,7 @@
           padding-bottom: 8px;
           padding-left: 10px;
           border-bottom: 1px solid transparentize(white, 0.5);
-        transition: background-color 0.3s;
+         transition: background-color $transition_time;
 
           &:hover
           {
@@ -183,7 +183,7 @@
             background-color: transparent;
             color: $font-color;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color $transition_time;
             &:hover
             {
               background-color: transparent;

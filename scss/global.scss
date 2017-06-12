@@ -43,3 +43,49 @@ body {
 		margin:20px;
 		color: lighten($font-color,30);
 }
+
+
+.box {
+	border:2px solid $blue;
+	margin:0 0 30px;
+
+	h3 {
+		background: $blue;
+		padding: 15px;
+		text-align: center;
+		color: white;
+
+	}
+
+	.box_content {
+		padding:15px;
+	}
+
+	&.box_orange {
+			border-color: $orange;
+
+			h3 {
+				background-color: $orange;
+			}
+
+	}
+
+	&.box_green {
+			border-color: $green;
+
+			h3 {
+				background-color: $green;
+			}
+
+	}
+
+	&.box_yellow {
+			border-color: $yellow;
+
+			h3 {
+				background-color: $yellow;
+			}
+
+	}
+
+}
