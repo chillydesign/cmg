@@ -54,3 +54,15 @@ ul#employees {
 		border-bottom: 1px dotted transparentize($font_color, 0.8);
 	}
 }
+
+
+body.page-template-template-home .search_box {
+	margin:0;
+
+	label {
+		display: inline-block;
+		padding: 0 10px 0 0;
+		text-indent: 0;
+		border:0;
+	}
+}

@@ -11,10 +11,12 @@ nav#sidebar {
   color: white;
   min-height: 100vh;
   transition: all $transition_time;
-
+  position: relative;
+  text-indent: -9999px;
 
   &.expanded {
-    width: $sidebar_width;
+    // width: $sidebar_width;
+    // z-index: 101;
   }
 
 
@@ -31,9 +33,14 @@ nav#sidebar {
       text-transform: uppercase;
       border-bottom: 1px solid white;
 
+
       a {
         display: block;
-        padding:10px;
+        background-position: left  center;
+        background-size: 24px;
+        background-repeat: no-repeat;
+        padding:20px 0 20px 40px;
+
 
         &:link, &:visited, &:active {
           color: white;
@@ -51,9 +58,11 @@ nav#sidebar {
         li {
           text-transform: none;
           border:0;
+          padding:0;
 
           a {
-
+            background-image:none;
+            padding:10px
           }
         }
       }
@@ -74,7 +83,8 @@ nav#sidebar {
   transition: all $transition_time;
 
   &.expanded {
-    width: $sidebar_width;
+    // width: $sidebar_width;
+    // z-index: 100;
   }
 
 }
@@ -84,6 +94,13 @@ nav#sidebar {
 @media (min-width: 768px){
   nav#sidebar {
     width: $sidebar_width;
+    ul {
+      li {
+        a {
+            text-indent: 0px;
+        }
+      }
+    }
   }
   #sidebar_bg {
     width: $sidebar_width;

@@ -84,8 +84,7 @@ body.page-template-template-home #events_calendar {
         border-right: 1px solid transparentize(white, 0.5);
         border-bottom: 1px solid transparentize(white, 0.5);
 
-        &.event
-        {
+        &.event {
           background-color: lighten($orange, 30);
           color: white;
           transition: background-color $transition_time;
@@ -94,6 +93,7 @@ body.page-template-template-home #events_calendar {
           {
             background-color: $orange
           }
+
         }
 
         &.adjacent-month
@@ -214,4 +214,15 @@ body.page-template-template-home #events_calendar {
       }
     }
   }
+}
+
+
+
+
+.purple-event {
+  background-color: purple!important;
+  color: lighten(purple, 56) !important;
+   a {
+       color: lighten(purple, 56) !important;
+   }
 }

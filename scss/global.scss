@@ -44,6 +44,8 @@ body {
 @import 'calendar';
 
 
+
+
 .loading {
 		font-size: 4em;
 		animation: spin 2s infinite linear;
@@ -54,12 +56,34 @@ body {
 
 .title_icon {
 	padding:20px 0 20px 50px;
-	background-position: center center;
-	background-size: 40px;
+	background-position: 5px center;
+	background-size: 30px;
 	background-repeat: no-repeat;
 
-	&.icon_download {
-		background-image:url('../images/download.png')
-	}
 
 }
+
+
+nav li.icon_home  > a,
+.title_icon.icon_home {background-image:url('../img/home.svg')}
+
+nav li.icon_logout  > a,
+.title_icon.icon_logout {background-image:url('../img/logout.svg')}
+
+nav li.icon_calendar   > a,
+	.title_icon.icon_calendar {background-image:url('../img/calendar.svg')}
+
+nav li.icon_news  > a,
+.title_icon.icon_news {background-image:url('../img/documents.svg')}
+
+nav li.icon_contacts  > a,
+.title_icon.icon_contacts {background-image:url('../img/annuaire.svg')}
+
+nav li.icon_download  > a,
+.title_icon.icon_download {background-image:url('../img/download.svg')}
+
+nav li.icon_wifi  > a,
+.title_icon.icon_wifi {background-image:url('../img/wifi.svg')}
+
+nav li.icon_search  > a,
+.title_icon.icon_search {background-image:url('../img/search.svg')}
