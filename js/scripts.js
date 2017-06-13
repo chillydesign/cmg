@@ -8,11 +8,11 @@
 				 additionalMarginTop: 30
 			});
 
-			$('#sidebar').on('mouseover', function(){
-				$('#sidebar, #sidebar_bg ').addClass('expanded');
-			}).on('mouseout', function(){
-				$('#sidebar, #sidebar_bg ').removeClass('expanded');
-			})
+			// $('#sidebar').on('mouseover', function(){
+			// 	$('#sidebar, #sidebar_bg ').addClass('expanded');
+			// }).on('mouseout', function(){
+			// 	$('#sidebar, #sidebar_bg ').removeClass('expanded');
+			// })
 
 
 

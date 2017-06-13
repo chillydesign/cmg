@@ -73,11 +73,17 @@ nav li.icon_logout  > a,
 nav li.icon_calendar   > a,
 	.title_icon.icon_calendar {background-image:url('../img/calendar.svg')}
 
-nav li.icon_news  > a,
-.title_icon.icon_news {background-image:url('../img/documents.svg')}
+nav li.icon_documents  > a,
+.title_icon.icon_documents {background-image:url('../img/documents.svg')}
+
+nav li.icon_hr  > a,
+.title_icon.icon_hr {background-image:url('../img/hr.svg')}
 
 nav li.icon_contacts  > a,
 .title_icon.icon_contacts {background-image:url('../img/annuaire.svg')}
+
+nav li.icon_library  > a,
+.title_icon.icon_library {background-image:url('../img/library.svg')}
 
 nav li.icon_download  > a,
 .title_icon.icon_download {background-image:url('../img/download.svg')}
@@ -87,3 +93,13 @@ nav li.icon_wifi  > a,
 
 nav li.icon_search  > a,
 .title_icon.icon_search {background-image:url('../img/search.svg')}
+
+nav li.icon_forms  > a,
+.title_icon.icon_forms {background-image:url('../img/documents.svg')}
+
+nav li.icon_location  > a,
+.title_icon.icon_location {background-image:url('../img/location.svg')}
+
+
+nav li.icon_news  > a {background-image:url('../img/rss.svg')}
+.title_icon.icon_news {background-image:url('../img/rss_orange.svg')}

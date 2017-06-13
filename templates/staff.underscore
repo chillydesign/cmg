@@ -34,12 +34,12 @@
 
 <%  if ( staff_members.length == 0 ) { %>
 		<li class="single_employee">
-		<h4>No employees found</h4>
+		<h4>Aucune personne trouvée</h4>
 		</li>
 <% } %>
 
 </ul>
 
 <%  if ( staff_members.length > 5 ) { %>
-<p><a href="#" id="back_to_top">&#8593; Back to top</a></p>
+<p><a href="#" id="back_to_top">&#8593; Retour en haut</a></p>
 <% } %>
