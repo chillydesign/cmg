@@ -51,7 +51,7 @@
 
 
 
-						<div class="tiva-events-calendar compact" data-view="calendar" data-source="json"></div>
+						<div class="tiva-events-calendar compact" data-start="monday" data-view="calendar" data-source="json"></div>
 
 					<!-- <div id="events_calendar">
 						<span class="loading glyphicon glyphicon-cog"></span>

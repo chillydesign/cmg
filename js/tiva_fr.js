@@ -1,12 +1,13 @@
 // Day, Month
 var wordMonth = new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
-var wordDay_sun = "Lundi";
-var wordDay_mon = "Mardi";
-var wordDay_tue = "Mercredi";
-var wordDay_wed = "Jeudi";
-var wordDay_thu = "Vendredi";
-var wordDay_fri = "Samedi";
-var wordDay_sat = "Dimanche";
+
+var wordDay_mon = "Lundi";
+var wordDay_tue = "Mardi";
+var wordDay_wed = "Mercredi";
+var wordDay_thu = "Jeudi";
+var wordDay_fri = "Vendredi";
+var wordDay_sat = "Samedi";
+var wordDay_sun = "Dimanche";
 
 
 
