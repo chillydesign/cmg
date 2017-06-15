@@ -14,7 +14,7 @@
 					<h3>Chercher</h3>
 				<form  class="box_content" method="GET" action="">
 					<?php $sm_value = ( isset($_GET['sm']) ) ? $_GET['sm'] : ''; ?>
-					<input placeholder="chercher un staff membre" id="staff_search"  type="text" name="sm" value="<?php echo $sm_value; ?>"  >
+					<input placeholder="rechercher une personne" id="staff_search"  type="text" name="sm" value="<?php echo $sm_value; ?>"  >
 					<input type="submit" id="submit_staff_search"   />
 					<div id="category_box" class="search_box">
 						<?php $terms = get_terms( array( 'taxonomy' => 'personnel_category',  'parent' => 0  )); ?>

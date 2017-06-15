@@ -7,7 +7,7 @@
 
 			<?php if (is_user_logged_in()): ?>
 			<li class="icon_logout" >
-				<a href="<?php echo wp_logout_url(); ?>"><?php _e('Logout', 'webfactor'); ?></a>
+				<a href="<?php echo wp_logout_url(); ?>"><?php _e('Déconnexion', 'webfactor'); ?></a>
 			</li>
 		<?php endif; ?>
 

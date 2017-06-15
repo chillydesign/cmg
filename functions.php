@@ -88,7 +88,7 @@ function webfactor_nav()
 }
 
 function wf_version(){
-  return '0.0.1';
+  return '0.0.3';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -119,7 +119,7 @@ function webfactor_styles()
 {
 
 
-    wp_register_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), wf_version(), 'all');
+    wp_register_style('bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css', array(), wf_version(), 'all');
     wp_enqueue_style('bootstrap'); // Enqueue it!
 
     wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(),  'all');

@@ -13,7 +13,7 @@
               <div class="events">
                 <div class="headers">
                   <div class="x-button">&#x2716;</div>
-                  <div class="event-header">EVENTS</div>
+                  <div class="event-header">EVENEMENTS</div>
                 </div>
                 <div class="events-list">
                   <% _.each(eventsThisMonth, function(event) { %>

@@ -74,7 +74,7 @@
 						<h4 class="title_icon icon_search">Rechercher une personne</h4>
 						<?php $staff_search_url = site_url('annuaire'); ?>
 						<form  class="box_content" method="GET" action="<?php echo $staff_search_url; ?>">
-							<input placeholder="chercher un staff membre" id="staff_search"  type="text" name="sm" >
+							<input placeholder="rechercher une personne" id="staff_search"  type="text" name="sm" >
 							<input type="submit" id="submit_staff_search"   />
 							<div id="category_box" class="search_box">
 								<?php $terms = get_terms( array( 'taxonomy' => 'personnel_category',  'parent' => 0  )); ?>

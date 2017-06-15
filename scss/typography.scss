@@ -5,16 +5,28 @@
 h1 {
 	background: url('../img/h1.jpg') no-repeat center center;
 	background-size: cover;
-	padding:45px 90px;
+	padding:45px 20px;
 	width: 100%;
 	color: white;
 	text-align: center;
 	margin:0 0 30px;
 	text-transform: uppercase;
 	text-shadow: 0 0 5px transparentize(black,0.5);
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 120%;
 }
+
+
+@media (min-width: 768px){
+	h1 {
+		padding: 45px 90px;
+		font-size: 3em;
+	}
+
+}
+
+
+
 
 
 h2 {
@@ -46,13 +58,6 @@ section p, section li {font-size:2em;}
 
 li li, li p {font-size: inherit;}
 ul ul , ul ol, ol ol {font-size: inherit}
-
-
-@media (min-width: 768px){
-
-
-}
-
 
 
 
