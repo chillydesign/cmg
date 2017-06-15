@@ -338,3 +338,39 @@
 .events-calendar-bar .bar-btn {
     position: relative;
 }
+
+
+
+
+
+span.bar-btn.calendar-view, span.bar-btn.list-view {
+    display: none;
+}
+
+.tiva-calendar-compact .calendar-title, .tiva-calendar-compact .calendar-btn {
+    background: #aaa;
+}
+
+.tiva-calendar-compact .calendar-day-weekend {
+    color: #666;
+}
+
+tr td:last-child, .tiva-calendar-compact .calendar-event-mark {
+    background: #e6e6e6;
+}
+
+.tiva-calendar-compact .calendar-table tr th {
+background:white;
+    color: #333;
+}
+
+.tiva-calendar-compact .calendar-day-today {
+    background: rgba(233, 126, 6, 0.21);
+}
+
+span.calendar-event-mark.event_class_2 {
+    background: #e97e06;
+}
+
+
+.tiva-event-detail-compact .event-name { color: #e97e06;}

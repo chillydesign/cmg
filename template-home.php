@@ -26,24 +26,37 @@
 
 					<h4 class="title_icon icon_news">	Prochainement</h4>
 					<ul>
+						<?php
+						$s = new DateTime('today');
+					  $e = new DateTime('last day of next year');
+					  $start = $s->format('Y-m-d');
+					  $end = $e->format('Y-m-d');
+
+						?>
 						<?php $events = get_posts(array(
 							'post_type'  => 'evenement',
 							'posts_per_page' => 2,
 							'post_status' => 'publish',
-							'meta_key'   => 'date',
-							'orderby'    => 'meta_value_num',
-							'order'    => 'ASC',
-							 'meta_query' => array(
-								 array(
-									 'key'     => 'date',
-									 'value'   =>  date('Ymd')  ,
-									 'compare' => '>',
-									)
-							 )
-
-						 )); ?>
+							'orderby' => 'date_start',
+						  'order'=> 'ASC',
+						  'meta_query'=>	array(
+						    'relation' => 'OR',
+						    array(
+						      'key'     => 'date_start',
+						      'value'   =>  array($start, $end),
+						      'compare' => 'BETWEEN',
+						      'type'    =>  'date'
+						    ),
+						    array(
+						      'key'     => 'date_end',
+						      'value'   =>  array($start, $end),
+						      'compare' => 'BETWEEN',
+						      'type'    =>  'date'
+						    )
+						  )
+						)); ?>
 						<?php if ( $events ) : foreach ( $events as $post ) : setup_postdata( $post ); ?>
-							<?php $date = get_field('date', get_the_ID()  );  ?>
+							<?php $date = get_field('date_start', get_the_ID()  );  ?>
 							<?php $date_formatted =  date('d/m/Y', strtotime( $date )); ?>
 							<li><a href="<?php echo get_the_permalink(); ?>"><strong> <?php echo $date_formatted; ?></strong> <?php echo get_the_title(); ?></a></li>
 				    <?php endforeach; wp_reset_postdata(); endif; ?>
