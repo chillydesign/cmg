@@ -39,6 +39,8 @@
 
 		// CALENDAR
 		if (typeof calendar_api_url != 'undefined'){
+
+
 			var $calendar_template = $('#calendar_template').html();
 			var $events_calendar = $('#events_calendar');
 			var now = moment().startOf('month');
@@ -50,37 +52,6 @@
 				data: {start: start, end: end }
 			}).done(function( data ) {
 
-					var mini_calendar = $events_calendar.clndr({
-				    template: $calendar_template,
-						weekOffset: 1,
-				    events: data,
-						moment: moment,
-				    clickEvents: {
-				      click: function(target) {
-				        if(target.events.length) {
-				          var daysContainer = $events_calendar.find('.days-container');
-				          daysContainer.toggleClass('show-events', true);
-				          $events_calendar.find('.x-button').click( function() {
-				            daysContainer.toggleClass('show-events', false);
-				          });
-				        }
-				      },
-							onMonthChange: function (month) {
-								var start = month.format("YYYY-MM-DD");
-								var end = month.add(1, 'months').subtract(1, 'day').format("YYYY-MM-DD");
-
-									$.ajax({
-										url: calendar_api_url,
-										data: {start: start, end: end },
-									}).done(function( data ) {
-											mini_calendar.setEvents(data);
-									});
-
-							},
-				    },
-				    adjacentDaysChangeMonth: true,
-				    forceSixRows: true
-				  });
 
 
 			});

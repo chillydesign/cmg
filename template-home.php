@@ -51,9 +51,11 @@
 
 
 
-					<div id="events_calendar">
+						<div class="tiva-events-calendar compact" data-view="calendar" data-source="json"></div>
+
+					<!-- <div id="events_calendar">
 						<span class="loading glyphicon glyphicon-cog"></span>
-					</div>
+					</div> -->
 
 
 
@@ -141,7 +143,8 @@
 
 
 		<script type="text/javascript">
-			var calendar_api_url = '<?php echo home_url(); ?>/api/v1/?events=true';
+
+			var events_json = '<?php echo home_url(); ?>/api/v1/?events=true';
 		</script>
 		<script id="calendar_template" type="x-underscore">
 		<?php echo file_get_contents(dirname(__FILE__) . '/templates/calendar.underscore'); ?>

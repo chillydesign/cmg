@@ -31,8 +31,9 @@
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/underscore/underscore-min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/moment/min/moment.min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/clndr/clndr.min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva_fr.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/scripts.js"></script>
 		<?php wp_footer(); ?>
 
 		<script>
