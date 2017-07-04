@@ -28,13 +28,19 @@
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/theia-sticky-sidebar/dist/ResizeSensor.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/theia-sticky-sidebar/dist/theia-sticky-sidebar.min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- <script type="text/javascript" src="<?php // echo $td; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+        <!-- <script type="text/javascript" src="<?php // echo $td; ?>/bower_components/moment/min/moment.min.js"></script> -->
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/underscore/underscore-min.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/moment/min/moment.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.min.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.gallery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva_fr.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/js/scripts.js"></script>
+		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
+        <link rel="stylesheet" href="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.min.css">
+        <link rel="stylesheet" href="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.gallery.min.css">
 		<?php wp_footer(); ?>
+
+
 
 		<script>
 		// (function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

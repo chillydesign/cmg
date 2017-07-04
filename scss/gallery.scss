@@ -1,0 +1,52 @@
+@import "variables";
+
+ul.gallery_ul {
+    margin:0 0 40px;
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin:5px;
+
+        a {
+            img {
+
+            }
+        }
+    }
+}
+
+
+ul#gallery_navigator {
+    margin:0 0 ;
+    background-color: rgba(255,255,255,0.8);
+    padding:15px 0;
+
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin:5px;
+        a {
+            padding:10px;
+            border:2px solid $orange;
+            border-radius: 5px;
+            display:inline-block;
+            background: white;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    ul#gallery_navigator {
+        &.fixed {
+            position: fixed;
+            top:0;
+            z-index: 100;
+            left: #{$sidebar_width + 30px};
+            right: 0;
+
+        }
+    }
+
+}

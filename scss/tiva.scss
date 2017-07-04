@@ -374,3 +374,28 @@ span.calendar-event-mark.event_class_2 {
 
 
 .tiva-event-detail-compact .event-name { color: #e97e06;}
+
+ span.bar-btn.back-calendar.pull-right.active:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: 'x';
+    color: #757575;
+    font-size: 18px;
+    padding: 8px 4px;
+    line-height: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+ span.bar-btn.back-calendar.pull-right.active {
+    font-size: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    background: 0;
+    z-index: 36;
+    margin: 5px 6px;
+}

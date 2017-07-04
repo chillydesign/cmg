@@ -66,9 +66,6 @@
 
 						<div class="tiva-events-calendar compact" data-start="monday" data-view="calendar" data-source="json"></div>
 
-					<!-- <div id="events_calendar">
-						<span class="loading glyphicon glyphicon-cog"></span>
-					</div> -->
 
 
 
@@ -110,8 +107,8 @@
 				<h3>Infos Pratiques</h3>
 				<div class="box_content">
 					<h4 class="title_icon icon_wifi">Accès Wifi</h4>
-					<p style="padding:0"><strong>CMG ETU :</strong> Bartholoni1835</p>
-					<p><strong>CMG Invité :</strong> passwd</p>
+					<p style="padding:0"><strong>CMG ETU :</strong> <?php echo get_option('wifi_username'); ?></p>
+					<p><strong>CMG Invité :</strong> <?php echo get_option('wifi_password'); ?></p>
 
 
 				</div>
@@ -159,8 +156,6 @@
 
 			var events_json = '<?php echo home_url(); ?>/api/v1/?events=true';
 		</script>
-		<script id="calendar_template" type="x-underscore">
-		<?php echo file_get_contents(dirname(__FILE__) . '/templates/calendar.underscore'); ?>
-		</script>
+		
 
 <?php get_footer(); ?>

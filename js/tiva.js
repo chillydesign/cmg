@@ -704,6 +704,10 @@ function showEventDetail(id, layout, day, month, year) {
 }
 
 jQuery(document).ready(function(){
+
+
+    if (typeof  events_json != 'undefined') {
+
 	// Init calendar full
 	if (jQuery('.tiva-events-calendar.full').length) {
 		jQuery('.tiva-events-calendar.full').html(	'<div class="events-calendar-bar">'
@@ -765,7 +769,7 @@ jQuery(document).ready(function(){
 
 	// Get events from json file or ajax php
 	var source = (typeof jQuery('.tiva-events-calendar').attr('data-source') != "undefined") ? jQuery('.tiva-events-calendar').attr('data-source') : 'json';
-	if (source == 'json') { // Get events from json file : events/events.json
+	if (source == 'json'  ) { // Get events from json file : events/events.json
 		jQuery.getJSON( events_json, function( data ) {
 			for (var i = 0; i < data.items.length; i++) {
 				var event_date = new Date(data.items[i].year, Number(data.items[i].month) - 1, data.items[i].day);
@@ -883,5 +887,7 @@ jQuery(document).ready(function(){
 			jQuery(this).parents('.tiva-events-calendar').find('.list-view').addClass('active');
 		}
 	});
+
+} // END OF IF TYPEOF EVENTS_JSON IS NOT UNDEFINED
 
 });

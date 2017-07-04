@@ -16,6 +16,35 @@
 
 
 
+            var $galleries_container = $('#galleries_container');
+            var $gallery_navigator = $('#gallery_navigator');
+            var $gallery_navigator_top = $gallery_navigator.offset().top;
+            var $gallery_navigator_height = $gallery_navigator.outerHeight();
+            $('a', $gallery_navigator ).on('click', function(e){
+                e.preventDefault();
+                var $href = $(this).attr('href');
+                $("html, body").animate({ scrollTop:  $($href).offset().top  }, 500);
+            });
+
+
+            var $window = $(window);
+            $window.on('scroll', function(){
+                var $scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (  $scrollTop > ( $gallery_navigator_top )   ) {
+					$gallery_navigator.addClass('fixed');
+                    $galleries_container.css({'margin-top':  $gallery_navigator_height })
+
+
+				} else {
+					$gallery_navigator.removeClass('fixed');
+                    $galleries_container.css({'margin-top':  0 })
+
+				}
+
+            });
+
+
+
 
 		// SHOW NAVIGATION MENU ON MOBILE
 		var $navigation_menu = $('#navigation_menu');
@@ -35,7 +64,7 @@
 
 
 		// set locale to French
-		frenchMomentLocale();
+		//frenchMomentLocale();
 
 		// CALENDAR
 		if (typeof calendar_api_url != 'undefined'){
