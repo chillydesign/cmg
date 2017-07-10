@@ -761,5 +761,35 @@ function redirect_if_not_loggedin() {
   }
 
 
+  add_filter( 'authenticate' , 'check_blank_username', 30, 3);
+
+
+
+   function  check_blank_username( $user, $username, $password ) {
+      // forcefully capture login failed to forcefully open wp_login_failed action,
+      // so that this event can be captured
+
+      if ( empty( $username ) || empty( $password ) ) {
+          do_action( 'wp_login_failed', $user );
+      }
+      return $user;
+  } ;
+
+
+  // dont go to wp-admin when you enter wrong username/password
+  // redirects you back to where you came from
+  add_action( 'wp_login_failed', 'jazz_login_failure' );
+  function jazz_login_failure( $username ) {
+    $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
+    // if there's a valid referrer, and it's not the default log-in screen
+    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+      wp_redirect( $referrer  );  // let's append some information (login=failed) to the URL for the theme to use
+      exit;
+    }
+  }
+
+
+
+
 
   ?>
