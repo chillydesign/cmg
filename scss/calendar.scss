@@ -264,3 +264,24 @@ aside.timeline {
   .month.active:after {background: $orange;}
   .month.arrow:after {background: $green;}
 }
+
+.events_table {
+    border-top: solid 1px;
+    margin-top: 20px;
+    border-right: solid 20px white;
+}
+
+.events_table tr {border-bottom: solid 1px;}
+
+.events_table td{
+  background: none!important;
+  padding: 40px 0;
+}
+
+@media(max-width: 600px){
+  .events_table td{
+    line-height: 200%;
+    display: block;
+    padding: 0;
+  }
+}
