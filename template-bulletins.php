@@ -10,10 +10,15 @@
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+                <div class="events_list">
+
+
 
                 <?php the_content(); ?>
                 <?php get_template_part('bulletins_index'); ?>
-								boop
+                </div>
+                <?php get_template_part('sidebar-date'); ?>
+                <div style="clear:both"></div>
 
 				<?php edit_post_link(); ?>
 

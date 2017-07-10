@@ -44,7 +44,6 @@
 	)); ?>
 	<?php
 		setlocale(LC_TIME, "fr_FR");
-
 		echo '<h2>' . ucfirst(utf8_encode(strftime('%B', mktime(null, null, null, $month, 1)))) . strftime(' %Y', mktime(null, null, null, null, null, $year + 1)) . '</h2>';
 	?>
 	<?php $i=1; ?>

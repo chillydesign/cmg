@@ -96,7 +96,7 @@ function webfactor_header_scripts()
 {
   if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    wp_deregister_script('jquery');
+    //wp_deregister_script('jquery');
 
     wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
     wp_enqueue_script('modernizr'); // Enqueue it!
@@ -734,7 +734,7 @@ function webfactorcomments($comment, $args, $depth)
 
 
 function month_selected($mo, $ye) {
-  if(isset($_GET['ye'])){$year = $_GET['ye'];} else {$year = date(y); }
+  if(isset($_GET['ye'])){$year = $_GET['ye'];} else {$year = date(Y); }
 	if(isset($_GET['mo'])){$month = $_GET['mo'];} else {$month = date(m);}
 
 if($month == $mo && $year == $ye){

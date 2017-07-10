@@ -25,7 +25,8 @@
 
 
 		<?php $td = get_template_directory_uri() ; ?>
-		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/jquery/dist/jquery.min.js"></script>
+
+        <script type='text/javascript' src='<?php echo home_url(); ?>/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/theia-sticky-sidebar/dist/ResizeSensor.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/theia-sticky-sidebar/dist/theia-sticky-sidebar.min.js"></script>
 		<!-- <script type="text/javascript" src="<?php // echo $td; ?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
