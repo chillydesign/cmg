@@ -23,8 +23,14 @@
             </li>
         <?php endforeach; ?>
     </ul>
-<?php endif; ?> 
+<?php endif; ?>
 
+<div class="row">
+	<div class="col-sm-8"><?php echo get_field('text'); ?></div>
+	<div class="col-sm-4">
+		<
+	</div>
+</div>
 
 
 
