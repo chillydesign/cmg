@@ -700,6 +700,51 @@ function webfactorcomments($comment, $args, $depth)
     <?php
   }
 
+  add_filter( 'cf7_storage_csv_columns', function( $rows ) {
+
+    // Specify the field names you wish to remove
+    $unset_fields = array(
+        // 'mail-date',
+        'mail-from',
+        'mail-to',
+        'mail-subject',
+        'mail-body',
+        'mail-attachments',
+        'mail-from-name',
+        'entry-id',
+        'entry-url',
+        'http-referer',
+        'http-user-agent',
+        'http-remote-addr',
+    );
+
+    foreach ( $rows as &$row ) {
+        foreach ( $unset_fields as $field_name ) {
+            if ( isset( $row[ $field_name ] ) ) {
+                unset( $row[ $field_name ] );
+            }
+        }
+    }
+
+    return $rows;
+} );
+
+
+
+
+
+function month_selected($mo, $ye) {
+  if(isset($_GET['ye'])){$year = $_GET['ye'];} else {$year = date(y); }
+	if(isset($_GET['mo'])){$month = $_GET['mo'];} else {$month = date(m);}
+
+if($month == $mo && $year == $ye){
+  echo 'active';
+}
+
+
+
+}
+
 
 
   ?>

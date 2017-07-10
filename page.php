@@ -12,6 +12,7 @@
 
 				<?php // include('section-loop.php'); ?>
                 <?php the_content(); ?>
+								<?php include('section-loop.php')?>
                 <?php if (have_rows('galeries'))   include('galerie_content.php'); ?>
 
                 <?php // comments_template( '', true ); // Remove if you don't want comments ?>

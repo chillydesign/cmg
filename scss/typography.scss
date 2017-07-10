@@ -50,10 +50,10 @@ h4 {font-size: 1.6em;padding:0 0 10px;font-weight: bold;text-transform: uppercas
 
 
 
-p { font-size: 1.5em;padding:0 0 30px;line-height: 160%;  }
-li { font-size: 1.5em;padding:0 0 5px;line-height: 160%  }
+p { font-size: 15px;padding:0 0 30px;line-height: 160%;  }
+li { font-size: 15px;padding:0 0 5px;line-height: 160%  }
 
-section p, section li {font-size:2em;}
+section p, section li {font-size:15px;}
 
 
 li li, li p {font-size: inherit;}
@@ -123,4 +123,76 @@ input {padding: 10px;width: 100%;font-size: 1.5em;}
 input[type="checkbox"] { width:auto }
 label {
 	font-size: 1.4em;
+}
+
+form.wpcf7-form , form.wpcf7-form  p, form.wpcf7-form  p strong, form.wpcf7-form  p em, form.wpcf7-form  input,  form.wpcf7-form  table tr td, form.wpcf7-form  table tr th {
+    font-size: 15px;
+}
+
+form.wpcf7-form th {padding: 20px; color: white; background: $blue;}
+form.wpcf7-form td {
+    padding: 10px 20px 10px 0!important;
+}
+
+form.wpcf7-form  input, form.wpcf7-form  textarea {
+    border: solid 1px;
+    margin: 3px 0;
+    width: 100%;
+}
+input.wpcf7-form-control.wpcf7-file {
+    line-height: 0;
+}
+
+form.wpcf7-form label input[type="radio"] {
+	width: 25px;
+	margin-left: -20px;
+}
+
+span.wpcf7-list-item-label {
+    margin-right: 20px;
+}
+
+form.wpcf7-form label input, form.wpcf7-form label span {
+    display: inline-block;
+    font-size: 15px;
+}
+
+form.wpcf7-form table tr td {
+    background: white!important;
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok, div.wpcf7-validation-errors {
+    position: fixed;
+    min-height: 150px;
+    top: calc(40vh - 80px);
+    width: calc(80vw - 250px);
+    left: calc(250px + 10vw);
+    background: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+		font-size: 1.2em;
+		animation: fadeout 5s forwards;
+}
+
+div.wpcf7-validation-errors {background: $yellow; color:black;}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+				z-index: 999;
+    }
+    75% {
+        opacity: 1;
+				z-index: 999;
+    }
+		99% {
+        opacity: 0;
+				z-index: 999;
+    }
+		100% {
+				opacity: 0;
+        z-index: -1;
+    }
 }

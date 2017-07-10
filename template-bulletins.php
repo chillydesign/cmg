@@ -13,7 +13,7 @@
 
                 <?php the_content(); ?>
                 <?php get_template_part('bulletins_index'); ?>
-
+								boop
 
 				<?php edit_post_link(); ?>
 

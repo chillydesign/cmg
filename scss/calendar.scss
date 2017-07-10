@@ -226,3 +226,41 @@ body.page-template-template-home #events_calendar {
        color: lighten(purple, 56) !important;
    }
 }
+
+.events_list {
+  float: left;
+  width: calc(100% - 50px;);
+}
+aside.timeline {
+  width: 45px;
+  float: right;
+  border-right: solid 4px grey;
+  min-height: calc(100vh - 220px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+
+    .month {
+      font-size: 14px;
+      padding: 5px;
+      transform: rotate(-30deg);
+      position: relative;
+
+
+
+      &:after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: $blue;
+        position: absolute;
+        right: -6px;
+        top: 16px;
+        border-radius: 50%;
+      }
+  }
+  .month.active:after {background: $orange;}
+  .month.arrow:after {background: $green;}
+}

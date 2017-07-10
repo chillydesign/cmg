@@ -8,6 +8,8 @@
 				 additionalMarginTop: 30
 			});
 
+			$(".wpcf7-form").trigger('reset');
+
 			// $('#sidebar').on('mouseover', function(){
 			// 	$('#sidebar, #sidebar_bg ').addClass('expanded');
 			// }).on('mouseout', function(){
@@ -15,8 +17,13 @@
 			// })
 
 
+			$('a.noclick').on('click', function(e){
+				e.preventDefault();
+			});
+
 
             var $galleries_container = $('#galleries_container');
+						if ( $galleries_container.length ) {
             var $gallery_navigator = $('#gallery_navigator');
             var $gallery_navigator_top = $gallery_navigator.offset().top;
             var $gallery_navigator_height = $gallery_navigator.outerHeight();
@@ -42,7 +49,7 @@
 				}
 
             });
-
+					}
 
 
 

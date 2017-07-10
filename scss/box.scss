@@ -71,4 +71,30 @@
 
 	}
 
+	&.box_purple {
+			border-color: $purple;
+
+			h3, .button {
+				background-color: $purple;
+			}
+
+			strong, h4 {
+				color: $purple;
+			}
+
+	}
+
+	&.box_red {
+			border-color: $red;
+
+			h3, .button {
+				background-color: $red;
+			}
+
+			strong, h4 {
+				color: $red;
+			}
+
+	}
+
 }
