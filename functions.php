@@ -737,13 +737,28 @@ function month_selected($mo, $ye) {
   if(isset($_GET['ye'])){$year = $_GET['ye'];} else {$year = date(Y); }
 	if(isset($_GET['mo'])){$month = $_GET['mo'];} else {$month = date(m);}
 
-if($month == $mo && $year == $ye){
-  echo 'active';
+    if($month == $mo && $year == $ye){
+      echo 'active';
+    }
 }
 
 
+// PREVENT ACCESS TO MEMBERS PAGE
+add_action('template_redirect', 'redirect_if_not_loggedin');
+function redirect_if_not_loggedin() {
 
-}
+  global $post;
+  if (isset($post)){
+
+
+    if (  ! is_user_logged_in()   &&   ! is_page_template('template-login.php') ) {
+        // feel free to customize the following line to suit your needs
+        wp_redirect(site_url('login/?access_denied'), $status = 302);
+        exit;
+      }
+
+    }
+  }
 
 
 
