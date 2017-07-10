@@ -753,7 +753,7 @@ function redirect_if_not_loggedin() {
 
     if (  ! is_user_logged_in()   &&   ! is_page_template('template-login.php') ) {
         // feel free to customize the following line to suit your needs
-        wp_redirect(site_url('login/?access_denied'), $status = 302);
+        wp_redirect(site_url('login/?acces_refuse'), $status = 302);
         exit;
       }
 

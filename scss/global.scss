@@ -143,3 +143,30 @@ nav li.icon_news  > a {background-image:url('../img/rss.svg')}
         }
     }
 }
+
+.loginbox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+		background-color:$green;
+		background-image: url('../img/login_bg.jpg');
+		background-repeat: no-repeat;
+		background-position: center right;
+		background-size: cover;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_inner {
+    background: rgba(255,255,255,0.8);
+    padding: 50px;
+    border-radius: 20px;
+}
+.login_inner h2 {text-align: center; padding-bottom: 25px; margin-bottom: 30px; border-bottom: solid 1px;}
+form#loginform p {
+    font-size: 12px;
+}

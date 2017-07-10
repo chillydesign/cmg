@@ -25,10 +25,21 @@
     </ul>
 <?php endif; ?>
 
-<div class="row">
-	<div class="col-sm-8"><?php echo get_field('text'); ?></div>
+<div class="row" style="margin-top:50px;">
+	<div class="col-sm-8"><?php echo get_field('texte'); ?></div>
 	<div class="col-sm-4">
-		<
+		<div class="box box_orange">
+        <h3>Dossier</h3>
+        <div class="box_content">
+					<p><a class="orange_button" href="<?php echo get_field('documentation'); ?>" target="_blank">Télécharger la documentation</a></p>
+				</div>
+    </div>
+		<div class="box box_orange">
+				<h3>Suivi du Projet</h3>
+				<div class="box_content">
+					<?php echo get_field('box'); ?>
+				</div>
+		</div>
 	</div>
 </div>
 
