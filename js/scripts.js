@@ -22,6 +22,14 @@
 			});
 
 
+            $('.bxslider').bxSlider({
+                controls: true,
+                pager: false,
+                auto: true,
+                autoHover: true
+            });
+
+
             var $galleries_container = $('#galleries_container');
 						if ( $galleries_container.length ) {
             var $gallery_navigator = $('#gallery_navigator');

@@ -108,3 +108,31 @@ nav li.icon_location  > a,
 
 nav li.icon_news  > a {background-image:url('../img/rss.svg')}
 .title_icon.icon_news {background-image:url('../img/rss_orange.svg')}
+
+
+
+.slide_photo_background {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bx-wrapper {
+    position: relative;
+
+    .bx-controls-direction {
+        a {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            width: 40px;
+            background: url('..img/chevron-l.svg') no-repeat center center;
+            text-indent: -9999px;
+            background-size: 30px;
+            z-index: 100;
+        }
+    }
+}
