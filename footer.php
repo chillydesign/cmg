@@ -37,7 +37,8 @@
 		<script type="text/javascript" src="<?php echo $td; ?>/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva_fr.js"></script>
 		<script type="text/javascript" src="<?php echo $td; ?>/js/tiva.js"></script>
-		<script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script>
+		<!-- <script type="text/javascript" src="<?php echo $td; ?>/js/min/scripts.js"></script> -->
+		<script type="text/javascript" src="<?php echo $td; ?>/js/scripts.js"></script>
         <link rel="stylesheet" href="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.min.css">
         <link rel="stylesheet" href="<?php echo $td; ?>/bower_components/featherlight/release/featherlight.gallery.min.css">
 		<?php wp_footer(); ?>
