@@ -66,3 +66,11 @@ body.page-template-template-home .search_box {
 		border:0;
 	}
 }
+
+.single_employee_inner.employee_enseignants h4 {
+    color: $green;
+}
+
+.single_employee_inner.employee_personnel-administratif h4 {
+	color: $blue;
+}

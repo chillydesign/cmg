@@ -29,15 +29,15 @@
 	<div class="col-sm-8"><?php echo get_field('texte'); ?></div>
 	<div class="col-sm-4">
 		<div class="box box_orange">
-        <h3>Dossier</h3>
-        <div class="box_content">
-					<p><a class="orange_button" href="<?php echo get_field('documentation'); ?>" target="_blank">Télécharger la documentation</a></p>
-				</div>
+        <a style="text-decoration: none; " class="orange_button" href="<?php echo get_field('documentation')['url']; ?>" target="_blank"><h3>Dossier Projet Place Neuve</h3></a>
+
     </div>
 		<div class="box box_orange">
 				<h3>Suivi du Projet</h3>
 				<div class="box_content">
-					<?php echo get_field('box'); ?>
+					  <?php while ( have_rows('letters') ) : the_row(); ?>
+							<a class="placeneuvelink" href="<?php echo get_sub_field('file')['url'];?>" target_="_blank"><?php include('img/download.svg'); ?> <?php echo get_sub_field('title'); ?>
+						<?php endwhile; ?>
 				</div>
 		</div>
 	</div>

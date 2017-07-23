@@ -155,7 +155,7 @@ nav li.icon_news  > a {background-image:url('../img/rss.svg')}
 		background-repeat: no-repeat;
 		background-position: center right;
 		background-size: cover;
-    z-index: 9;
+    z-index: 900;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,4 +169,21 @@ nav li.icon_news  > a {background-image:url('../img/rss.svg')}
 .login_inner h2 {text-align: center; padding-bottom: 25px; margin-bottom: 30px; border-bottom: solid 1px;}
 form#loginform p {
     font-size: 12px;
+}
+
+.events_list {
+	a {display: none;}
+	a.downld{display:block;}
+	h2 {
+		svg {
+			height: 25px;
+			width: 21px;
+			left: 10px;
+			top: 3px;
+			position: relative;
+			path {
+				fill:$blue;
+			}
+		}
+	}
 }

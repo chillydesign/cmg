@@ -4,6 +4,18 @@
 
 		'use strict';
 
+			$('li.menu-item-has-children').on('click', function(){
+				$('.visible_ul').removeClass('visible_ul');
+				$(this).find('ul.sub-menu').addClass('visible_ul');
+			})
+
+			$(document).click(function(event) {
+				if(!$(event.target).is('li.menu-item-has-children a'))
+					{
+					   $('.visible_ul').removeClass('visible_ul');
+					}
+			})
+
 			$('.stickysidebar').theiaStickySidebar({
 				 additionalMarginTop: 30
 			});
@@ -17,8 +29,10 @@
 			// })
 
 
-			$('a.noclick').on('click', function(e){
-				e.preventDefault();
+			$('.noclick a').on('click', function(e){
+				if ($(window).width() < 768) {
+				   e.preventDefault();
+				}
 			});
 
 

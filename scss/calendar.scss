@@ -285,3 +285,23 @@ aside.timeline {
     padding: 0;
   }
 }
+.pdfemb-viewer div.pdfemb-wantmobile-fsarea {
+    background: grey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0;
+    font-size: 14px;
+}
+
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #34495e;
+  padding: 6px;
+  font-size: 12px;
+  border: 0;
+  color: white;
+}
+div#ui-datepicker-div {
+    width: auto;
+}
