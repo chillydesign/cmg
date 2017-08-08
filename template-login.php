@@ -26,8 +26,8 @@
   			</div>
   			<div class="login_fields">
   				<?php do_action('login_form', 'resetpass'); ?>
-  				<input type="submit" name="user-submit" value="<?php _e('Reset my password'); ?>" class="user-submit" tabindex="1002" />
-  				<?php  if($oublie === 'done') { echo '<p>A message will be sent to your email address.</p>'; } ?>
+  				<input type="submit" name="user-submit" value="Réinitialiser le mot de passe" class="user-submit" tabindex="1002" />
+  				<?php  if($oublie === 'done') { echo '<br /><p>Un message de confirmation vous sera envoyé.</p>'; } ?>
   				<input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>&amp;oublie=done" />
   				<input type="hidden" name="user-cookie" value="1" />
   			</div>

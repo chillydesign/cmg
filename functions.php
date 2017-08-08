@@ -672,20 +672,20 @@ function webfactorcomments($comment, $args, $depth)
   add_action('admin_menu', 'add_global_custom_options');
 
   function add_global_custom_options(){
-    add_options_page('CMG Options', 'CMG Options', 'manage_options', 'functions','global_custom_options');
+    add_options_page('Options CMG', 'Options CMG', 'manage_options', 'functions','global_custom_options');
   }
   function global_custom_options() {
     ?>
     <div class="wrap">
-      <h2>CMG Options</h2>
+      <h2>Options CMG</h2>
       <form method="post" action="options.php">
         <?php wp_nonce_field('update-options') ?>
-        <p><strong>Wifi Username:</strong><br />
+        <p><strong>CMG ETU:</strong><br />
           <input type="text" name="wifi_username" size="45" value="<?php echo get_option('wifi_username'); ?>" />
         </p>
 
 
-        <p><strong>Wifi Password:</strong><br />
+        <p><strong>CMG Invité:</strong><br />
           <input type="text" name="wifi_password" size="45" value="<?php echo get_option('wifi_password'); ?>" />
 
         </p>

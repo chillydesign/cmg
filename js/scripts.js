@@ -4,13 +4,15 @@
 
 		'use strict';
 
-			$('li.menu-item-has-children').on('click', function(){
+			$('li.menu-item-has-children').on('click', function(e){
 				$('.visible_ul').removeClass('visible_ul');
 				$(this).find('ul.sub-menu').addClass('visible_ul');
 			})
 
-			$(document).click(function(event) {
-				if(!$(event.target).is('li.menu-item-has-children a'))
+
+
+			$(document).click(function(e) {
+				if(!$(e.target).is('li.menu-item-has-children a'))
 					{
 					   $('.visible_ul').removeClass('visible_ul');
 					}
@@ -29,7 +31,7 @@
 			// })
 
 
-			$('.noclick a').on('click', function(e){
+			$('.noclick > a').on('click', function(e){
 				if ($(window).width() < 768) {
 				   e.preventDefault();
 				}
