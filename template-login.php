@@ -18,7 +18,7 @@
       <?php else : ?>
 
           <h2>Mot de passe oublié</h2>
-  		<p>Entrez votre adresse email pour recevoir votre nouveau mot de passe</p>
+  		<p>Entrez votre adresse email ou votre identifiant pour recevoir votre nouveau mot de passe par email.</p>
   		<form method="post" action="<?php echo site_url('wp-login.php?action=lostpassword', 'login_post') ?>" class="wp-user-form">
   			<div class="username">
   				<label for="user_login" class="hide"><?php _e('Username or Email'); ?>: </label>
