@@ -980,6 +980,10 @@ function redirect_if_not_loggedin() {
   }
 
 
-
+  function admin_default_page() {
+      $redirectto = get_home_url();
+    return $redirectto;
+  }
+  add_filter('login_redirect', 'admin_default_page');
 
   ?>
