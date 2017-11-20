@@ -13,6 +13,7 @@ ul#employees {
 		border-bottom: 1px solid transparentize($font_color,0.5);
 
 		.single_employee_inner {
+			&.employee_professeur h4 {color: #27ae61;}
 			h4 {
 				padding: 5px 0 10px;
 				margin:0;
