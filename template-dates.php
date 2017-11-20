@@ -15,8 +15,6 @@
 	if(isset($_GET['mo'])){$month = $_GET['mo'];} else {$month = date('m');}
 
 
-
-
 	 $start = $year . '-' . $month . '-01';
 	 $end = $year . '-' . $month . '-31';
 	 ?>
@@ -27,21 +25,25 @@
 		'orderby' => 'date_start',
 		'order'=> 'ASC',
 		'meta_query'=>	array(
-			'relation' => 'OR',
+			'relation' => 'AND',
 			array(
 				'key'     => 'date_start',
-				'value'   =>  array($start, $end),
-				'compare' => 'BETWEEN',
+				'value'   =>  $end,
+				'compare' => '<=',
 				'type'    =>  'date'
 			),
 			array(
 				'key'     => 'date_end',
-				'value'   =>  array($start, $end),
-				'compare' => 'BETWEEN',
+				'value'   =>  $start,
+				'compare' => '>=',
 				'type'    =>  'date'
 			)
 		)
-	)); ?>
+	));
+
+
+
+    ?>
 	<?php
 		setlocale(LC_TIME, "fr_FR");
 		echo '<h2>' . ucfirst(utf8_encode(strftime('%B', mktime(null, null, null, $month, 1)))) . strftime(' %Y', mktime(null, null, null, null, null, $year + 1)) . '</h2>';
