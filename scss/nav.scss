@@ -7,7 +7,7 @@ nav#sidebar {
 
 
   width: $sidebar_width_mobile;
-  float:left;
+  float: left;
   color: white;
   min-height: 100vh;
   transition: all $transition_time;
@@ -22,14 +22,14 @@ nav#sidebar {
 
 
   ul {
-    margin:0;
-    padding:0 20px 20px;
+    margin: 0;
+    padding: 0 20px 20px;
     list-style: none;
 
 
     li {
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
       display: block;
       text-transform: uppercase;
       border-bottom: 1px solid white;
@@ -39,24 +39,24 @@ nav#sidebar {
 
       a {
         display: block;
-        background-position: left  center;
+        background-position: left center;
         background-size: 24px;
         background-repeat: no-repeat;
-        padding:20px 0 20px 40px;
+        padding: 20px 0 20px 40px;
 
 
-        &:link, &:visited, &:active {
+        &:link,
+        &:visited,
+        &:active {
           color: white;
         }
 
-        &:hover {
-
-        }
+        &:hover {}
       }
 
       ul {
-        padding:0 0 5px;
-        margin::-10px 0 0 30px;
+        padding: 0 0 5px;
+        margin: -10px 0 0 30px;
         display: none;
         position: absolute;
         top: 8px;
@@ -78,19 +78,20 @@ nav#sidebar {
           left: -10px;
           top: 20px;
         }
+
         &.visible_ul {
           display: block;
         }
 
         li {
           text-transform: none;
-          border:0;
-          padding:0;
+          border: 0;
+          padding: 0;
           font-size: 1em;
 
           a {
-            background-image:none;
-            padding:0 5px 5px 10px;
+            background-image: none;
+            padding: 0 5px 5px 10px;
 
           }
         }
@@ -102,7 +103,7 @@ nav#sidebar {
 
 #sidebar_bg {
   position: fixed;
-  top:0;
+  top: 0;
   bottom: 0;
   width: $sidebar_width_mobile;
   left: 0;
@@ -122,14 +123,16 @@ nav#sidebar {
 
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   nav#sidebar {
     width: $sidebar_width;
+
     ul {
       li {
         a {
-            text-indent: 0px;
+          text-indent: 0px;
         }
+
         ul {
           display: block;
           position: relative;
@@ -138,11 +141,15 @@ nav#sidebar {
           width: auto;
           text-indent: auto;
           padding: 0;
-          &:before {display: none;}
+
+          &:before {
+            display: none;
+          }
         }
       }
     }
   }
+
   #sidebar_bg {
     width: $sidebar_width;
   }

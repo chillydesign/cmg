@@ -1,5 +1,4 @@
-
-#events_calendar{
+#events_calendar {
 
   margin: 0 auto;
   width: 100%;
@@ -7,22 +6,20 @@
 }
 
 body.page-template-template-home #events_calendar {
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 
-#events_calendar .clndr
-{
+#events_calendar .clndr {
   overflow: hidden;
 
 
-  .controls
-  {
+  .controls {
     background-color: $light_grey;
     color: $font_color;
 
-    .clndr-previous-button, .clndr-next-button
-    {
+    .clndr-previous-button,
+    .clndr-next-button {
       width: 15%;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -30,17 +27,20 @@ body.page-template-template-home #events_calendar {
       text-align: center;
       cursor: pointer;
       font-size: 25px;
-      -webkit-user-select: none; /* Chrome/Safari */
-      -moz-user-select: none; /* Firefox */
-      -ms-user-select: none; /* IE10+ */
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+ */
       transition: background-color $transition_time;
-      &:hover
-      {
+
+      &:hover {
         background-color: darken($light_grey, 10);
       }
     }
-    .month
-    {
+
+    .month {
       width: 70%;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -53,15 +53,13 @@ body.page-template-template-home #events_calendar {
     }
   }
 
-  .days-container
-  {
+  .days-container {
     position: relative;
     width: 100%;
     height: 213px;
 
 
-    .days
-    {
+    .days {
       position: absolute;
       left: 0;
       width: 100%;
@@ -69,8 +67,8 @@ body.page-template-template-home #events_calendar {
       transition: left $transition_time;
       background-color: $light_grey;
 
-      .day, .empty
-      {
+      .day,
+      .empty {
         width: 14.285714286%;
         display: inline-block;
         padding-top: 8px;
@@ -89,33 +87,29 @@ body.page-template-template-home #events_calendar {
           color: white;
           transition: background-color $transition_time;
           cursor: pointer;
-          &:hover
-          {
+
+          &:hover {
             background-color: $orange
           }
 
         }
 
-        &.adjacent-month
-        {
+        &.adjacent-month {
           color: rgba(0, 0, 0, 0.3);
         }
       }
 
-      .empty
-      {
+      .empty {
         height: 31px;
         vertical-align: bottom;
       }
 
-      .headers
-      {
-        background-color:  darken($light_grey,20);
+      .headers {
+        background-color: darken($light_grey, 20);
         padding-top: 10px;
         padding-bottom: 10px;
 
-        .day-header
-        {
+        .day-header {
           width: 14.285714286%;
           display: inline-block;
           text-align: center;
@@ -124,32 +118,28 @@ body.page-template-template-home #events_calendar {
       }
     }
 
-    .events
-    {
+    .events {
       position: absolute;
       left: 100%;
       width: 100%;
       height: 217px;
-      transition:left $transition_time;
+      transition: left $transition_time;
       background-color: #eee;
 
-      .headers
-      {
+      .headers {
         position: relative;
       }
 
-      .event-header
-      {
+      .event-header {
         width: 100%;
-        background-color:  darken($light_grey,20);
+        background-color: darken($light_grey, 20);
         padding-top: 10px;
-    padding-bottom: 10px;
+        padding-bottom: 10px;
         text-align: center;
         color: white;
       }
 
-      .x-button
-      {
+      .x-button {
         position: absolute;
         font-size: 80%;
         top: 7px;
@@ -158,32 +148,28 @@ body.page-template-template-home #events_calendar {
         transition: color $transition_time;
         font-size: 1.6em;
         color: white;
-        &:hover
-        {
+
+        &:hover {
           color: white;
         }
       }
 
-      .events-list
-      {
+      .events-list {
         overflow: scroll;
         height: 185px;
 
-        .event
-        {
+        .event {
           padding-top: 8px;
           padding-bottom: 8px;
           padding-left: 10px;
           border-bottom: 1px solid transparentize(white, 0.5);
           transition: background-color $transition_time;
 
-          &:hover
-          {
+          &:hover {
             background-color: lighten(#eee, 4%);
           }
 
-          a
-          {
+          a {
             position: relative;
             font-size: 12px;
             // font-weight: 700;
@@ -192,8 +178,8 @@ body.page-template-template-home #events_calendar {
             color: $font-color;
             text-decoration: none;
             transition: color $transition_time;
-            &:hover
-            {
+
+            &:hover {
               background-color: transparent;
               color: $orange;
             }
@@ -202,14 +188,12 @@ body.page-template-template-home #events_calendar {
       }
     }
 
-    &.show-events
-    {
-      .days
-      {
+    &.show-events {
+      .days {
         left: -100%;
       }
-      .events
-      {
+
+      .events {
         left: 0;
       }
     }
@@ -220,17 +204,19 @@ body.page-template-template-home #events_calendar {
 
 
 .purple-event {
-  background-color: purple!important;
+  background-color: purple !important;
   color: lighten(purple, 56) !important;
-   a {
-       color: lighten(purple, 56) !important;
-   }
+
+  a {
+    color: lighten(purple, 56) !important;
+  }
 }
 
 .events_list {
   float: left;
-  width: calc(100% - 50px;);
+  width: calc(100% - 50px);
 }
+
 aside.timeline {
   width: 45px;
   float: right;
@@ -241,67 +227,80 @@ aside.timeline {
   justify-content: space-between;
   padding: 10px 0;
 
-    .month {
-      font-size: 14px;
-      padding: 5px;
-      transform: rotate(-30deg);
-      position: relative;
+  .month {
+    font-size: 14px;
+    padding: 5px;
+    transform: rotate(-30deg);
+    position: relative;
 
 
 
-      &:after {
-        content: '';
-        display: block;
-        width: 15px;
-        height: 15px;
-        background: $blue;
-        position: absolute;
-        right: -6px;
-        top: 16px;
-        border-radius: 50%;
-      }
+    &:after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: $blue;
+      position: absolute;
+      right: -6px;
+      top: 16px;
+      border-radius: 50%;
+    }
   }
-  .month.active:after {background: $orange;}
-  .month.arrow:after {background: $green;}
+
+  .month.active:after {
+    background: $orange;
+  }
+
+  .month.arrow:after {
+    background: $green;
+  }
 }
 
 .events_table {
-    border-top: solid 1px;
-    margin-top: 20px;
-    border-right: solid 20px white;
+  border-top: solid 1px;
+  margin-top: 20px;
+  border-right: solid 20px white;
 }
 
-.events_table tr {border-bottom: solid 1px;}
+.events_table tr {
+  border-bottom: solid 1px;
+}
 
-.events_table td{
-  background: none!important;
+.events_table td {
+  background: none !important;
   padding: 40px 0;
 }
 
-@media(max-width: 600px){
-  .events_table td{
+@media(max-width: 600px) {
+  .events_table td {
     line-height: 200%;
     display: block;
     padding: 0;
   }
 }
+
 .pdfemb-viewer div.pdfemb-wantmobile-fsarea {
-    background: grey;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    letter-spacing: 0;
-    font-size: 14px;
+  background: grey;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: 0;
+  font-size: 14px;
 }
 
 
-.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all,
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
   background: #34495e;
   padding: 6px;
   font-size: 12px;
   border: 0;
   color: white;
 }
+
 div#ui-datepicker-div {
-    width: auto;
+  width: auto;
 }
