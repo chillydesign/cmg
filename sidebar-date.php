@@ -12,7 +12,12 @@
 			$year_end = $year + 1;
 		}
 	?>
-	<a href="?mo=<?php echo $month; ?>&ye=<?php echo $year - 1;?>" class="month arrow" id="">Prec.</a>
+	<?php if ($month == 1){$prev_month = 12;} else {$prev_month = $month -1;} ?>
+	<?php if ($month == 1){$prev_year = $year - 1;} else {$prev_year = $year;} ?>
+	<?php if ($month == 12){$next_month = 1;} else {$next_month = $month + 1;} ?>
+	<?php if ($month == 12){$next_year = $year + 1;} else {$next_year = $year;} ?>
+	<a href="?mo=<?php echo $prev_month; ?>&ye=<?php echo $prev_year;?>" class="month arrow" id="">Prec.</a>
+	<!-- <a href="?mo=<?php echo $month; ?>&ye=<?php echo $year - 1;?>" class="month arrow" id="">Prec.</a> -->
 	<a href="?mo=09&ye=<?php echo $year_start;?>" class="month <?php month_selected('09', $year_start);?>" id="month_09">Sep</a>
 	<a href="?mo=10&ye=<?php echo $year_start;?>" class="month <?php month_selected('10', $year_start);?>" id="month_10">Oct</a>
 	<a href="?mo=11&ye=<?php echo $year_start;?>" class="month <?php month_selected('11', $year_start);?>" id="month_11">Nov</a>
@@ -25,5 +30,6 @@
 	<a href="?mo=06&ye=<?php echo $year_end;?>" class="month <?php month_selected('06', $year_end);?>" id="month_06">Jun</a>
 	<a href="?mo=07&ye=<?php echo $year_end;?>" class="month <?php month_selected('07', $year_end);?>" id="month_07">Jul</a>
 	<a href="?mo=08&ye=<?php echo $year_end;?>" class="month <?php month_selected('08', $year_end);?>" id="month_08">Aou</a>
-	<a href="?mo=<?php echo $month; ?>&ye=<?php echo $year + 1;?>" class="month arrow" id="">Suiv.</a>
+	<!-- <a href="?mo=<?php echo $month; ?>&ye=<?php echo $year + 1;?>" class="month arrow" id="">Suiv.</a> -->
+	<a href="?mo=<?php echo $next_month; ?>&ye=<?php echo $next_year;?>" class="month arrow" id="">Suiv.</a>
 </aside>

@@ -3,7 +3,7 @@
 <?php $oublie = (isset($_GET['oublie'])) ? $_GET['oublie'] : false; ?>
 <?php var_dump($oublie); ?>
 
-<div class="loginbox">
+<div class="loginbox" style="background-image:url('<?php echo get_field('login_image', 'option'); ?>')">
   <div class="login_inner">
 
       <?php if ( $oublie === false ) : ?>

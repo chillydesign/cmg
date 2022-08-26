@@ -1,14 +1,10 @@
 <?php /* Template Name: Accueil Page Template */ get_header(); ?>
 
 
-
-			<h1><?php the_title(); ?></h1>
+			<h1 style="background-image:url('<?php if(get_field('home_image', 'option')) { echo get_field('home_image', 'option'); } else { echo get_field('login_image', 'option');} ?>')"><?php the_title(); ?></h1>
 
 <div class="row">
 <div class="col-sm-6">
-
-
-
 	<div class="box box_orange">
 			<h3>A la une</h3>
 			<div class="box_content">
@@ -65,14 +61,20 @@
 
 
 						<div class="tiva-events-calendar compact" data-start="monday" data-view="calendar" data-source="json"></div>
-
-
-
-
 			</div>
 	</div>
 
-
+	<?php if( have_rows('left_col') ) : while ( have_rows('left_col') ) : the_row(); ?>
+      <div class="box box_<?php echo get_sub_field('color'); ?>">
+        <?php if(get_sub_field('button')) { ?>
+          <a <?php if(get_sub_field('newtab')){echo 'target="_blank"';} ?> style="text-decoration : none; " href="<?php echo get_sub_field('link')?>"> <h3><?php echo get_sub_field('title');?></h3></a>
+        <?php } else { ?>
+          <h3><?php echo get_sub_field('title');?></h3>
+          <div class="box_content"><?php echo get_sub_field('content');?></div>
+        <?php } ?>
+      </div>
+  	<?php endwhile; ?>
+  	<?php endif; ?>
 
 
 </div>
@@ -102,18 +104,17 @@
 					</div>
 
 			</div>
-
-		<div class="box box_yellow">
-				<h3>Infos Pratiques</h3>
-				<div class="box_content">
-					<h4 class="title_icon icon_wifi">Accès Wifi</h4>
-					<p style="padding:0"><strong>CMG ETU :</strong> <?php echo get_option('wifi_username'); ?></p>
-					<p><strong>CMG Invité :</strong> <?php echo get_option('wifi_password'); ?></p>
-
-
-				</div>
-
-		</div>
+			<?php if( have_rows('right_col') ) : while ( have_rows('right_col') ) : the_row(); ?>
+      <div class="box box_<?php echo get_sub_field('color'); ?>">
+        <?php if(get_sub_field('button')) { ?>
+          <a <?php if(get_sub_field('newtab')){echo 'target="_blank"';} ?> style="text-decoration : none; " href="<?php echo get_sub_field('link')?>"> <h3><?php echo get_sub_field('title');?></h3></a>
+        <?php } else { ?>
+          <h3><?php echo get_sub_field('title');?></h3>
+          <div class="box_content"><?php echo get_sub_field('content');?></div>
+        <?php } ?>
+      </div>
+  	<?php endwhile; ?>
+  	<?php endif; ?>
 
 
 </div>
