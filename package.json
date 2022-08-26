@@ -4,7 +4,9 @@
   "description": "This is the blank theme used by webfactor.ch when starting new wordpress projects.",
   "main": "index.php",
   "scripts": {
-    "test": "say test"
+    "test": "say test",
+    "dev": "sass scss/global.scss css/global.css  --watch --style=compressed  --no-source-map",
+    "build": "postcss css/global.css -r  -u autoprefixer -m "
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,5 @@
   },
   "homepage": "https://github.com/chillydesign/blanktheme#readme",
   "dependencies": {},
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-minify": "^1.0.0",
-    "gulp-sass": "^3.1.0"
-  }
+  "devDependencies": {}
 }
