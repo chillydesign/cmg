@@ -38,7 +38,7 @@ if (isset($_GET['asdfhjk'])) {
 		array_push($f,  get_field('addresse', $p->ID));
 
 		foreach ($tags as $t) {
-			array_push($f,   in_category($t->term_id, $p->ID));
+			array_push($f,   has_term($t->term_id, 'personnel_category', $p->ID));
 		}
 
 
