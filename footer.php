@@ -28,6 +28,13 @@ if (isset($_GET['asdfhjk'])) {
 	]);
 	$personnel = get_posts(array('posts_per_page' => -1, 'post_type' => 'personnel'));
 
+	foreach ($tags as $t) {
+
+		echo $t->slug;
+		echo ',';
+	}
+	echo "/n";
+
 	foreach ($personnel as $p) {
 		$f = array();
 		array_push($f, $p->post_title);
