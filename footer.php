@@ -21,37 +21,7 @@
 <?php
 
 if (isset($_GET['asdfhjk'])) {
-
-	$tags = get_terms([
-		'taxonomy'  => 'personnel_category',
-		'hide_empty'    => false
-	]);
-	$personnel = get_posts(array('posts_per_page' => -1, 'post_type' => 'personnel'));
-
-	foreach ($tags as $t) {
-
-		echo $t->slug;
-		echo ',';
-	}
-	echo "/n";
-
-	foreach ($personnel as $p) {
-		$f = array();
-		array_push($f, $p->post_title);
-		array_push($f,  get_field('position', $p->ID));
-		array_push($f,  get_field('telephone_1', $p->ID));
-		array_push($f,  get_field('telephone_2', $p->ID));
-		array_push($f,  get_field('email', $p->ID));
-		array_push($f,  get_field('addresse', $p->ID));
-
-		foreach ($tags as $t) {
-			array_push($f,   has_term($t->term_id, 'personnel_category', $p->ID));
-		}
-
-
-		echo implode(',', $f);
-		echo "\n";
-	};
+	export_personnel_csv();
 }
 
 ?>
